@@ -7,7 +7,7 @@
 :page-last-edited: 2026-11-12
 :page-context-surface: component-home
 
-The vault repository holds the desktop app, the browser extension, the TypeScript SDK, and the static site at https://personalrecordvault.netlify.app/[personalrecordvault.netlify.app].
+The vault repository holds the desktop app, the browser extension, the TypeScript SDK, and the static site at https://userdata-cloud.netlify.app/[userdata-cloud.netlify.app].
 
 Maintainers who are about to add a product surface should read xref:viability-gate.adoc[what to build first] before the subsystem plans.
 

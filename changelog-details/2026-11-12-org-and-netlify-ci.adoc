@@ -2,6 +2,6 @@
 
 The vault repository is prepared to live in the GitHub organization `userdata-cloud` under the name `userdata-cloud`.
 
-The marketing site stays on the existing Netlify site `personalrecordvault`. GitHub Actions builds `@prv/site` and publishes the static output. Netlify's Git-connected builder is not the publisher after the site repository link is removed.
+The marketing site stays on the existing Netlify site, later renamed `userdata-cloud` (`https://userdata-cloud.netlify.app/`). The previous `personalrecordvault.netlify.app` hostname does not serve the site. GitHub Actions builds `@prv/site` and publishes the static output. Netlify's Git-connected builder is not the publisher after the site repository link is removed.
 
 Docs that were under `docs/plan/` and `docs/explanation/` now sit in the Antora component `vault`, so the org docs hub can include them. A maintainer page states the first market: proof of purchase and ownership. The longer business plan is in the private `userdata-cloud/team-docs` repository.
