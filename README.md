@@ -63,7 +63,7 @@ See [CHANGELOG.adoc](CHANGELOG.adoc) and the [changelog-details](changelog-detai
 
 ## Documentation
 
-* [Explore the docs »](https://userdata-cloud.github.io/docs/vault/)
+* [Explore the docs »](https://docs.userdata.cloud/vault/)
 * [What to build first](docs/modules/ROOT/pages/viability-gate.adoc)
 * [Implementation plans (index) — unimplemented and partial areas](docs/modules/ROOT/pages/plan/index.adoc)
 * [Vision, constraints, and open questions](docs/modules/ROOT/pages/explanation/vision-and-constraints.adoc)

@@ -19,6 +19,7 @@ All notable changes to this project are documented in this file and in link:chan
 
 === Changed
 
+* Public docs for this repository are at `https://docs.userdata.cloud/vault/`.
 * The Netlify site name is `userdata-cloud` (`https://userdata-cloud.netlify.app/`). The previous `personalrecordvault.netlify.app` hostname no longer serves the site.
 * Implementation plans and explanation pages now live under `docs/modules/ROOT/pages/` so the org docs hub can publish them.
 * Primary UX stack moved from D to Electron; D prototype relocated to `native/cli`. Details: link:changelog-details/2026-05-12-electron-monorepo.adoc[2026-05-12 — Electron monorepo].
