@@ -6,8 +6,11 @@ All notable changes to this project are documented in this file and in link:chan
 
 === Added
 
+* Antora component `vault` under `docs/`, including a maintainer page for what to build first. Member-only market sequencing lives in the `userdata-cloud/team-docs` repository.
+* GitHub Actions workflow that publishes `apps/site` to the existing Netlify site. Details: link:changelog-details/2026-11-12-org-and-netlify-ci.adoc[2026-11-12 — Org move and Netlify CI].
+
 * Site crawlability: `apps/site` writes `/robots.txt` and `/sitemap.xml` from the shared prerender route list, excluding `/login`, `/app`, and `/identity` from the sitemap.
-* AsciiDoc **implementation plans** under `docs/plan/` (index plus per-area roadmaps for desktop, extension, web vault, provider interchange, hardware trust, data model, release signing, and native CLI). Entry point: link:docs/plan/index.adoc[`docs/plan/index.adoc`].
+* AsciiDoc **implementation plans** (index plus per-area roadmaps for desktop, extension, web vault, provider interchange, hardware trust, data model, release signing, and native CLI). Entry point: link:docs/modules/ROOT/pages/plan/index.adoc[plan index].
 * Electron + SolidJS desktop shell (`apps/desktop`) with USB-oriented vault path picker, demo graph visualization, and `electron-builder` installer configuration for Windows, macOS, and Linux.
 * WebExtension scaffold (`apps/extension`) for Chrome, Edge, and Firefox MV3.
 * GitHub Actions workflows for CI builds and tagged desktop releases (artifact uploads).
@@ -16,6 +19,7 @@ All notable changes to this project are documented in this file and in link:chan
 
 === Changed
 
+* Implementation plans and explanation pages now live under `docs/modules/ROOT/pages/` so the org docs hub can publish them.
 * Primary UX stack moved from D to Electron; D prototype relocated to `native/cli`. Details: link:changelog-details/2026-05-12-electron-monorepo.adoc[2026-05-12 — Electron monorepo].
 * Dropped the npm `solid-ui` (SolidOS) dependency from the desktop app; keep **@kobalte/core** on the static site and plain HTML controls in the desktop shell until a deliberate shared design system is chosen.
 * Refreshed deprecated `@xmldom/xmldom` (pulled by `electron-builder` via `plist`) to 0.8.15 and 0.9.12 within existing ranges.

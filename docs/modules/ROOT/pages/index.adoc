@@ -1,0 +1,21 @@
+= Personal records vault
+:description: Desktop app, browser extension, and static site for a personal records vault.
+:page-audience: Maintainers
+:page-usage-context: Component home on the userdata.cloud docs hub
+:page-orig-author: Ryan Johnson
+:page-last-author: Cursor agent on behalf of Ryan Johnson
+:page-last-edited: 2026-11-12
+:page-context-surface: component-home
+
+The vault repository holds the desktop app, the browser extension, the TypeScript SDK, and the static site at https://personalrecordvault.netlify.app/[personalrecordvault.netlify.app].
+
+Maintainers who are about to add a product surface should read xref:viability-gate.adoc[what to build first] before the subsystem plans.
+
+ifndef::page-context-active[]
+[.page-context.page-context-footer]
+****
+Original author:: {page-orig-author}
+Latest contributor:: {page-last-author}
+Last updated:: {page-last-edited}
+****
+endif::[]

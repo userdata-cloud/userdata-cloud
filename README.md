@@ -1,17 +1,17 @@
 <a id="readme-top"></a>
 <div align="center">
-  <a href="https://github.com/AMDphreak/personal-records-vault/graphs/contributors"><img src="https://img.shields.io/github/contributors/AMDphreak/personal-records-vault.svg?style=for-the-badge" alt="Contributors"></a>
-  <a href="https://github.com/AMDphreak/personal-records-vault/network/members"><img src="https://img.shields.io/github/forks/AMDphreak/personal-records-vault.svg?style=for-the-badge" alt="Forks"></a>
-  <a href="https://github.com/AMDphreak/personal-records-vault/stargazers"><img src="https://img.shields.io/github/stars/AMDphreak/personal-records-vault.svg?style=for-the-badge" alt="Stargazers"></a>
-  <a href="https://github.com/AMDphreak/personal-records-vault/issues"><img src="https://img.shields.io/github/issues/AMDphreak/personal-records-vault.svg?style=for-the-badge" alt="Issues"></a>
-  <a href="https://github.com/AMDphreak/personal-records-vault/blob/main/LICENSE.txt"><img src="https://img.shields.io/github/license/AMDphreak/personal-records-vault.svg?style=for-the-badge" alt="License"></a>
+  <a href="https://github.com/userdata-cloud/userdata-cloud/graphs/contributors"><img src="https://img.shields.io/github/contributors/userdata-cloud/userdata-cloud.svg?style=for-the-badge" alt="Contributors"></a>
+  <a href="https://github.com/userdata-cloud/userdata-cloud/network/members"><img src="https://img.shields.io/github/forks/userdata-cloud/userdata-cloud.svg?style=for-the-badge" alt="Forks"></a>
+  <a href="https://github.com/userdata-cloud/userdata-cloud/stargazers"><img src="https://img.shields.io/github/stars/userdata-cloud/userdata-cloud.svg?style=for-the-badge" alt="Stargazers"></a>
+  <a href="https://github.com/userdata-cloud/userdata-cloud/issues"><img src="https://img.shields.io/github/issues/userdata-cloud/userdata-cloud.svg?style=for-the-badge" alt="Issues"></a>
+  <a href="https://github.com/userdata-cloud/userdata-cloud/blob/main/LICENSE.txt"><img src="https://img.shields.io/github/license/userdata-cloud/userdata-cloud.svg?style=for-the-badge" alt="License"></a>
 
   <h1>Personal Records Vault</h1>
   <p>Local-first, user-held structured personal records with hooks for verifiable credentials, multi-modal indexing, and selective disclosure toward providers and employers.</p>
   <p>
-    <a href="https://github.com/AMDphreak/personal-records-vault/issues">Report Bug</a>
+    <a href="https://github.com/userdata-cloud/userdata-cloud/issues">Report Bug</a>
     &middot;
-    <a href="https://github.com/AMDphreak/personal-records-vault/issues">Request Feature</a>
+    <a href="https://github.com/userdata-cloud/userdata-cloud/issues">Request Feature</a>
   </p>
 </div>
 
@@ -63,9 +63,11 @@ See [CHANGELOG.adoc](CHANGELOG.adoc) and the [changelog-details](changelog-detai
 
 ## Documentation
 
-* [Implementation plans (index) — unimplemented and partial areas](docs/plan/index.adoc)
-* [Vision, constraints, and open questions](docs/explanation/vision-and-constraints.adoc)
-* [Provider SDK, OpenAPI contract, and language adapters](docs/explanation/provider-sdk.adoc)
+* [Explore the docs »](https://userdata-cloud.github.io/docs/vault/)
+* [What to build first](docs/modules/ROOT/pages/viability-gate.adoc)
+* [Implementation plans (index) — unimplemented and partial areas](docs/modules/ROOT/pages/plan/index.adoc)
+* [Vision, constraints, and open questions](docs/modules/ROOT/pages/explanation/vision-and-constraints.adoc)
+* [Provider SDK, OpenAPI contract, and language adapters](docs/modules/ROOT/pages/explanation/provider-sdk.adoc)
 * [Marketing / web vault site (`@prv/site`)](apps/site/README.adoc)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -117,9 +119,7 @@ pnpm dev:site
 pnpm build:site
 ```
 
-Netlify picks up [`netlify.toml`](netlify.toml) at the repository root: install dependencies, run `pnpm --filter @prv/site build`, and publish `apps/site/.output/public`.
-
-In the Netlify UI, connect the GitHub repository, leave the base directory empty (repo root), and confirm the build image uses **Node 22** and **pnpm** (the config sets `NODE_VERSION`).
+GitHub Actions builds `@prv/site` and publishes `apps/site/.output/public` to the existing Netlify site. [`netlify.toml`](netlify.toml) still names that build and publish directory for the CLI. The Netlify UI should not stay connected to the Git repository.
 
 The `/login` route stores a **session marker** in `sessionStorage` only. The `/app` route uses the **File System Access API** to list a folder you select (for example on a USB drive); nothing is uploaded to Netlify.
 
@@ -162,24 +162,23 @@ Codesigning and macOS notarization are not configured yet; expect unsigned macOS
 | `apps/desktop/` | Electron main/preload/renderer (SolidJS; plain controls for now) |
 | `apps/site/` | SolidStart 1 **static** marketing site + web vault shell (`@prv/site`, Netlify publish dir `.output/public`) |
 | `apps/extension/` | MV3 WebExtension popup scaffold |
-| `netlify.toml` | Netlify build and publish configuration for the static site |
+| `netlify.toml` | Publish directory for the Netlify CLI. Production publishes from GitHub Actions |
 | `spec/openapi/` | Local Provider **OpenAPI** contract for multi-language client generation |
 | `spec/json-schema/` | Payload **JSON Schema** mirrors for validators |
 | `packages/sdk/` | TypeScript **reference client** (`@prv/sdk`) |
-| `docs/explanation/` | Architecture and product reasoning (AsciiDoc) |
-| `docs/plan/` | Phased implementation plans for unfinished or partial subsystems (start at `index.adoc`) |
+| `docs/` | Antora component `vault` (explanation, plans, and the build-order gate) |
 | `changelog-details/` | Dated narrative notes linked from the changelog |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contributing
 
-Fork the repo, create a feature branch, and open a pull request. See open issues for known gaps and plans under `docs/plan/`.
+Fork the repo, create a feature branch, and open a pull request. See open issues for known gaps and plans under `docs/modules/ROOT/pages/plan/`. Read `docs/modules/ROOT/pages/viability-gate.adoc` before starting a new market.
 
 ### Top contributors
 
-<a href="https://github.com/AMDphreak/personal-records-vault/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=AMDphreak/personal-records-vault" alt="contributors" />
+<a href="https://github.com/userdata-cloud/userdata-cloud/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=userdata-cloud/userdata-cloud" alt="contributors" />
 </a>
 
 For per-person profile links, prefer [all-contributors](https://allcontributors.org/).
@@ -196,7 +195,7 @@ See the repository `LICENSE` / `LICENSE.txt` file.
 
 Ryan Johnson — [@amdphreak](https://twitter.com/amdphreak)
 
-Project Link: [https://github.com/AMDphreak/personal-records-vault](https://github.com/AMDphreak/personal-records-vault)
+Project Link: [https://github.com/userdata-cloud/userdata-cloud](https://github.com/userdata-cloud/userdata-cloud)
 
 Site: [https://ryanjohnson.dev](https://ryanjohnson.dev)
 

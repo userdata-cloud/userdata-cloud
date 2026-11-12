@@ -1,6 +1,6 @@
 import { Title } from "@solidjs/meta";
 
-const REPO = "https://github.com/AMDphreak/personal-records-vault";
+const REPO = "https://github.com/userdata-cloud/userdata-cloud";
 
 export default function Download() {
   return (

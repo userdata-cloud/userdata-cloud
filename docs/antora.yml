@@ -1,0 +1,5 @@
+name: vault
+title: Vault
+version: ~
+nav:
+  - modules/ROOT/nav.adoc

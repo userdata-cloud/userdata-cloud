@@ -1,0 +1,40 @@
+= What to build first
+:description: The market sequence maintainers follow before opening a new product surface.
+:page-audience: Maintainers
+:page-usage-context: Decision page on the vault component of the docs hub
+:page-orig-author: Ryan Johnson
+:page-last-author: Cursor agent on behalf of Ryan Johnson
+:page-last-edited: 2026-11-12
+:page-keywords: viability, receipts, warranties
+
+ifndef::page-context-active[]
+[.page-context.page-context-lead]
+****
+Audience role:: {page-audience}
+Original author:: {page-orig-author}
+Latest contributor:: {page-last-author}
+Last updated:: {page-last-edited}
+****
+endif::[]
+
+Maintainers use this page before starting a subsystem that is not already in the repository.
+
+The first records this product is allowed to pursue are proof of purchase and ownership: receipts, warranties, software licenses, and subscription trails. A person should be able to keep a structured copy after the store or the software vendor is gone.
+
+Medical records, banking, and a registry of every person are later markets. The north star in xref:explanation/vision-and-constraints.adoc[vision and constraints] still includes health and housing. Those sentences are not a build ticket.
+
+The reasoning, pricing, and sequencing live in the private team docs repository `userdata-cloud/team-docs`, for org members. This page is the public constraint so the codebase does not get ahead of that plan.
+
+== Allowed now
+
+* Local vault clients that already exist: desktop, extension, and the static site.
+* A signed record envelope a client can store and show.
+* Ingestion from mail a person already receives, aimed at receipts and proof of ownership.
+
+== Not allowed yet
+
+* Clinic or electronic health record integrations.
+* Bank or card-network integrations.
+* A public ledger of personal records.
+* Charging the person as the default way to store a baseline record.
+* A central directory that records which company wrote to which person.

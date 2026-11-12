@@ -1,0 +1,4 @@
+* xref:index.adoc[Personal records vault]
+* xref:viability-gate.adoc[What to build first]
+* xref:explanation/vision-and-constraints.adoc[Vision and constraints]
+* xref:plan/index.adoc[Implementation plans]

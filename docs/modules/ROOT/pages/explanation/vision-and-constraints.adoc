@@ -17,6 +17,9 @@ It also records engineering constraints so the repository does not pretend to sh
 . Replacing electronic health record systems inside clinics.
 . Promising regulatory certifications (HIPAA, GDPR tooling, FDA SaMD) without a compliance program.
 . Storing large imaging blobs inside a typical secure-element hardware wallet.
+. Starting medical, banking, or a universal civic registry before proof-of-ownership records work for a person. See xref:../viability-gate.adoc[what to build first].
+
+Health, housing, and other life records stay in the north star. They are not the first market this repository is allowed to build.
 
 == Platform split: D versus other runtimes
 
@@ -54,7 +57,7 @@ See link:provider-sdk.adoc[Provider SDK and cross-language adapters] for the Ope
 
 == Implementation planning
 
-Phased engineering work for areas not yet built (or only partially built) lives under link:../plan/index.adoc[`docs/plan/`]. Start at the index, then open the topic plan that matches the subsystem you are changing.
+Phased engineering work for areas not yet built (or only partially built) lives under xref:../plan/index.adoc[implementation plans]. Start at the index, then open the topic plan that matches the subsystem you are changing. Read xref:../viability-gate.adoc[what to build first] before opening a new surface.
 
 == Suggested data plane (sketch)
 

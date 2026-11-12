@@ -25,7 +25,7 @@ Review `src/generated/openapi-types.ts` before committing (not wired into `tsc` 
 
 == Other languages
 
-See link:../../docs/explanation/provider-sdk.adoc[Provider SDK and cross-language adapters].
+See link:../../docs/modules/ROOT/pages/explanation/provider-sdk.adoc[Provider SDK and cross-language adapters].
 
 == Example OpenAPI Generator invocations
 

@@ -1,7 +1,9 @@
 = Implementation plans — index
 
 This folder holds **detailed, actionable plans** for work that is **not yet implemented** or only partially implemented in the repository.
-It complements link:../explanation/vision-and-constraints.adoc[vision and constraints] (product direction) and link:../../CHANGELOG.adoc[CHANGELOG] (what shipped).
+It complements link:../explanation/vision-and-constraints.adoc[vision and constraints] (product direction) and link:../../../../../../CHANGELOG.adoc[CHANGELOG] (what shipped).
+
+Build order is gated by xref:../viability-gate.adoc[what to build first]. A plan file is a subsystem design. It is not permission to open a later market.
 
 == How to use these documents
 

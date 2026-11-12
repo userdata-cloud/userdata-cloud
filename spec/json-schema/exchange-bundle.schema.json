@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/AMDphreak/personal-records-vault/schemas/exchange-bundle.schema.json",
+  "$id": "https://github.com/userdata-cloud/userdata-cloud/schemas/exchange-bundle.schema.json",
   "title": "ExchangeBundle",
   "type": "object",
   "required": ["bundleId", "issuedAt", "issuer", "entries"],
