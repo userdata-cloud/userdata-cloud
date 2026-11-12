@@ -1,6 +1,8 @@
-# GitHub Actions (.github/workflows/deploy-netlify.yml) publishes production.
-# This file remains so the Netlify CLI knows the build command and the publish directory.
-# The Netlify UI should not stay linked to the Git repository, or two publishers will race.
+# GitHub Actions (.github/workflows/deploy-netlify.yml) publishes production once
+# NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID exist on the repository.
+# Until those secrets exist, the Netlify Git connection remains the publisher.
+# Remove that connection after the secrets exist so two publishers do not race.
+# This file still names the build command and the publish directory for the CLI.
 
 [build]
   # Netlify's Node image may not expose pnpm until Corepack activates the version from `package.json#packageManager`.
