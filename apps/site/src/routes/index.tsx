@@ -65,12 +65,23 @@ export default function Home() {
         </div>
       </section>
       <section class="band band--bytes">
-        <ul class="band__inner soundbytes">
-          <li>Records a company signs when it creates them.</li>
-          <li>Records that stay on a host of your choice.</li>
-          <li>Records that can live in a folder on disk, including a drive you carry.</li>
-          <li>Records that this site does not hold.</li>
-        </ul>
+        <div class="band__inner soundbytes">
+          <article class="soundbyte">
+            <h2>Keep your records.</h2>
+            <p>A company signs a structured record when it creates it.</p>
+          </article>
+          <article class="soundbyte">
+            <h2>A host of your choice</h2>
+            <p>Records that stay on a host of your choice.</p>
+          </article>
+          <article class="soundbyte">
+            <h2>A folder is one host</h2>
+            <p>A folder on disk is one such host, including a copy on a drive you carry.</p>
+          </article>
+          <article class="soundbyte">
+            <h2>This site is not the archive</h2>
+          </article>
+        </div>
       </section>
     </>
   );
