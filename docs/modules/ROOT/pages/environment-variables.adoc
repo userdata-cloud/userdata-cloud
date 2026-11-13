@@ -1,0 +1,54 @@
+= Environment variables
+:description: Names of environment variables for the vault site. No secret values.
+:page-audience: Maintainers
+:page-usage-context: Reference for public OpenID Connect client ids on the static site
+:page-orig-author: Ryan Johnson
+:page-last-author: Cursor agent on behalf of Ryan Johnson
+:page-last-edited: 2026-11-13
+
+ifndef::page-context-active[]
+[.page-context.page-context-lead]
+****
+Audience role:: {page-audience}
+Original author:: {page-orig-author}
+Latest contributor:: {page-last-author}
+Last updated:: {page-last-edited}
+****
+endif::[]
+
+The site reads public client ids at build time from `apps/site/.env`. Values stay in that file or in the host environment. This page lists names only.
+
+A client id does not create an account. Provider linking stays off until that account already has an email and a password.
+
+== Sign-in
+
+[cols="2,3,1,2,3",options="header"]
+|===
+| Variable | Purpose | Required | If unset | Source
+
+| `VITE_OIDC_GOOGLE_CLIENT_ID`
+| Public client id for Google OpenID Connect (`https://accounts.google.com`).
+| Optional
+| The Google button stays on the sign-in page and does not open the issuer.
+| Google Cloud console, APIs and services, Credentials. Set in `apps/site/.env` or the site build environment.
+
+| `VITE_OIDC_MICROSOFT_CLIENT_ID`
+| Public client id for Microsoft OpenID Connect (`https://login.microsoftonline.com/common/v2.0`).
+| Optional
+| The Microsoft button stays on the sign-in page and does not open the issuer.
+| Microsoft Entra app registration. Set in `apps/site/.env` or the site build environment.
+
+| `VITE_OIDC_APPLE_CLIENT_ID`
+| Public Services id for Apple OpenID Connect (`https://appleid.apple.com`).
+| Optional
+| The Apple button stays on the sign-in page and does not open the issuer.
+| Apple Developer, Certificates, Identifiers and Profiles, Services IDs. Set in `apps/site/.env` or the site build environment.
+
+| `VITE_OIDC_FIREFOX_CLIENT_ID`
+| Public client id for Firefox accounts OpenID Connect (`https://accounts.firefox.com`).
+| Optional
+| The Firefox button stays on the sign-in page and does not open the issuer.
+| Mozilla accounts OAuth client registration. Set in `apps/site/.env` or the site build environment.
+|===
+
+Do not put a client secret in the site, in this page, or in `.env.example`. The static site starts the authorization redirect only.

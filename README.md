@@ -121,7 +121,7 @@ pnpm build:site
 
 GitHub Actions builds `@prv/site` and publishes `apps/site/.output/public` to the existing Netlify site. [`netlify.toml`](netlify.toml) still names that build and publish directory for the CLI. The Netlify UI should not stay connected to the Git repository.
 
-The `/login` route stores a **session marker** in `sessionStorage` only. The `/app` route uses the **File System Access API** to list a folder you select (for example on a USB drive); nothing is uploaded to Netlify.
+The `/login` route signs in with a username and password and stores that session marker in `sessionStorage`. Google, Microsoft, Apple, and Firefox stay off until the account has an email and a password. Public client id names are listed in [environment variables](docs/modules/ROOT/pages/environment-variables.adoc). The `/app` route uses the **File System Access API** to list a folder you select (for example on a USB drive); nothing is uploaded to Netlify.
 
 ### Browser extension
 

@@ -13,9 +13,18 @@ export function subscribeSession(listener: Listener): () => void {
 }
 
 export type WebSession = {
+  /** Mailbox on the account. Empty until one is saved. A username is not an email. */
   email: string;
+  username?: string;
+  /** True only when a password is stored for this account. The password value is never kept here. */
+  hasPassword?: boolean;
   createdAt: string;
 };
+
+export function accountName(session: WebSession | null | undefined): string {
+  if (!session) return "";
+  return session.username?.trim() || session.email.trim();
+}
 
 export function readSession(): WebSession | null {
   if (typeof window === "undefined") return null;

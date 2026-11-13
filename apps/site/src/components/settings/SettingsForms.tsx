@@ -24,9 +24,14 @@ export function AccountSettings() {
   const { prefs, patch, save, saved } = usePrefs();
   const [photoError, setPhotoError] = createSignal<string | null>(null);
   const [email, setEmail] = createSignal("");
+  const [username, setUsername] = createSignal("");
 
   onMount(() => {
-    const sync = () => setEmail(readSession()?.email ?? "");
+    const sync = () => {
+      const session = readSession();
+      setEmail(session?.email ?? "");
+      setUsername(session?.username ?? "");
+    };
     sync();
     const off = subscribeSession(sync);
     onCleanup(off);
@@ -58,7 +63,11 @@ export function AccountSettings() {
         />
       </div>
       <div class="form__field">
-        <label class="label" for="accountEmail">Sign-in email</label>
+        <label class="label" for="accountUsername">Username</label>
+        <input class="input" id="accountUsername" value={username()} readOnly />
+      </div>
+      <div class="form__field">
+        <label class="label" for="accountEmail">Email on the account</label>
         <input class="input" id="accountEmail" value={email()} readOnly />
       </div>
       <div class="form__field">

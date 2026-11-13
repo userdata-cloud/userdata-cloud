@@ -449,6 +449,52 @@ a {
   @apply border border-border bg-muted/40 p-4;
 }
 
+.login {
+  @apply mx-auto w-full max-w-3xl text-left;
+}
+
+.login h1 {
+  @apply mb-3 text-2xl font-semibold text-foreground;
+}
+
+.login > p {
+  @apply mb-5 max-w-prose text-muted-foreground;
+}
+
+.login__providers {
+  @apply mb-3 mt-8 text-lg font-semibold text-foreground;
+}
+
+.login__error {
+  color: #b42318;
+  margin-top: 1rem;
+}
+
+.oauth-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.oauth-grid > .btn--signin {
+  width: 100%;
+}
+
+.oauth-grid > .btn--signin:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.oauth-grid > .btn--signin:disabled:hover {
+  background: transparent;
+  color: hsl(var(--foreground));
+}
+
+.login__oauth-note {
+  @apply mb-3 max-w-prose text-sm text-muted-foreground;
+}
+
 .form {
   @apply mx-auto max-w-md text-left;
 }

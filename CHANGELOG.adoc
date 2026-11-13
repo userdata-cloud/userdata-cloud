@@ -21,6 +21,7 @@ All notable changes to this project are documented in this file and in link:chan
 
 === Changed
 
+* Sign-in is username and password. Google, Microsoft, Apple, and Firefox stay in a wrapping grid and stay off until the account has an email and a password.
 * Home copy treats userdata.cloud as a place personal data can stay, online by default, with a local copy that can start offline and sync later. A separate line covers a record the issuer signs.
 * Plans now allow a PDF or scan of a paper receipt or warranty beside the structured record. Reading fields from the file is ingestion. The file is kept in addition to an issuer signature.
 * The theme control is part of the first page, so the icon is not a late client download.

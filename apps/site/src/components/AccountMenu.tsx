@@ -9,7 +9,7 @@ import {
 } from "~/components/ui/dropdown-menu";
 import { initials, readPreferences, subscribePreferences } from "~/lib/preferences";
 import { isBlind, subscribePrivacy } from "~/lib/privacy-hub";
-import { clearSession, readSession, subscribeSession } from "~/lib/session";
+import { accountName, clearSession, readSession, subscribeSession } from "~/lib/session";
 
 export default function AccountMenu() {
   const navigate = useNavigate();
@@ -41,7 +41,7 @@ export default function AccountMenu() {
   };
   const label = () => {
     if (isBlind()) return "Signed in";
-    return prefs().displayName.trim() || session()?.email || "Account";
+    return prefs().displayName.trim() || accountName(session()) || "Account";
   };
 
   return (
@@ -57,7 +57,7 @@ export default function AccountMenu() {
               when={!isBlind()}
               fallback={<span class="account-seal" />}
             >
-              <span class="account-initials">{initials(prefs().displayName, session()?.email ?? "")}</span>
+              <span class="account-initials">{initials(prefs().displayName, accountName(session()))}</span>
             </Show>
           }
         >
