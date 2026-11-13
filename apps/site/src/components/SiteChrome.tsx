@@ -37,6 +37,7 @@ export default function SiteChrome(props: ParentProps) {
     <div class="flex min-h-screen flex-col">
       <header class="site-header">
         <A href="/" class="wordmark">
+          <img src="/mark.svg" alt="" width="28" height="28" />
           userdata.cloud
         </A>
         <nav class="site-nav" aria-label="Site">
@@ -54,8 +55,8 @@ export default function SiteChrome(props: ParentProps) {
       </main>
       <footer class="site-footer">
         <p>
-          The record stays with a host you choose. <A href="/news">News</A> and <a href={DOCS}>docs</a> sit in
-          the bar above.
+          The record stays with a host you choose. <A href="/news">News</A>, <a href={DOCS}>docs</a>, and{" "}
+          <A href="/about">about</A>.
         </p>
       </footer>
     </div>

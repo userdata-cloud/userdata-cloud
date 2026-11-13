@@ -71,7 +71,13 @@ a {
 }
 
 .wordmark {
-  @apply text-base font-semibold text-foreground no-underline hover:no-underline;
+  @apply inline-flex items-center gap-2 text-base font-semibold text-foreground no-underline hover:no-underline;
+}
+
+.wordmark img {
+  display: block;
+  width: 1.75rem;
+  height: 1.75rem;
 }
 
 .site-nav {
@@ -351,6 +357,10 @@ a {
 
 .article time {
   @apply text-sm text-muted-foreground;
+}
+
+.credit {
+  @apply mt-10 text-sm text-muted-foreground;
 }
 
 .article h1 {
