@@ -67,7 +67,7 @@ a {
 }
 
 .matrix-field {
-  position: fixed;
+  position: absolute;
   inset: 0;
   z-index: 0;
   margin: 0;
@@ -80,13 +80,22 @@ a {
   line-height: 1.55;
   letter-spacing: 0.28em;
   white-space: pre;
-  opacity: 0.42;
-  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 36%, #000 0%, transparent 74%);
-  mask-image: radial-gradient(ellipse 80% 70% at 50% 36%, #000 0%, transparent 74%);
+  opacity: 0.48;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 8%,
+    #000 calc(50% - 36rem),
+    rgb(0 0 0 / 0.48) calc(50% - 24rem),
+    rgb(0 0 0 / 0.48) calc(50% + 24rem),
+    #000 calc(50% + 36rem),
+    #000 92%,
+    transparent 100%
+  );
 }
 
 .site-header {
-  @apply sticky top-0 z-10 flex flex-wrap items-center justify-between gap-4 border-b border-border bg-background/95 px-6 py-3 backdrop-blur;
+  @apply sticky top-0 z-10 flex flex-wrap items-center justify-between gap-4 border-b border-border bg-background/35 px-6 py-3 backdrop-blur-sm;
 }
 
 .site-main,
@@ -214,7 +223,8 @@ a {
 
 .band--hero {
   background: hsl(var(--primary) / 0.08);
-  padding: 4.5rem 0 6rem;
+  min-height: 64vh;
+  padding: 5.5rem 0 7rem;
 }
 
 .band--bytes {

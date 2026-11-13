@@ -36,7 +36,7 @@ export default function SiteChrome(props: ParentProps) {
   const home = () => loc.pathname === "/";
 
   return (
-    <div class="flex min-h-screen flex-col">
+    <div class="relative flex min-h-screen flex-col">
       <MatrixField />
       <header class="site-header">
         <A href="/" class="wordmark">

@@ -1,5 +1,5 @@
-const COLS = 140;
-const ROWS = 56;
+const COLS = 300;
+const ROWS = 160;
 
 function nextBit(n: number) {
   n = Math.imul(n ^ (n >>> 16), 0x7feb352d);
