@@ -118,8 +118,7 @@ a {
   line-height: 1;
 }
 
-.wordmark-data,
-.hero-data {
+.wordmark-data {
   --blend-a: rgb(255, 140, 0);
   --blend-b: rgb(0, 50, 255);
   --blend-end: rgb(255, 190, 255);
@@ -132,36 +131,16 @@ a {
   margin-left: 0.18em;
 }
 
-.hero-data {
-  font-family: "Doto", sans-serif;
-  font-weight: 400;
-  font-size: 1em;
-  font-synthesis: none;
-  letter-spacing: 0.01em;
-  margin-left: 0;
-  vertical-align: baseline;
-}
-
 .wordmark-data__layer,
-.wordmark-data__shift,
-.hero-data__layer,
-.hero-data__shift {
+.wordmark-data__shift {
   grid-area: 1 / 1;
   color: var(--blend-a);
   mix-blend-mode: plus-lighter;
 }
 
-.wordmark-data__shift,
-.hero-data__shift {
-  color: var(--blend-b);
-}
-
 .wordmark-data__shift {
+  color: var(--blend-b);
   animation: data-resolve 1.15s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-.hero-data__shift {
-  animation: data-drop 1.15s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 @keyframes data-resolve {
@@ -175,45 +154,28 @@ a {
   }
 }
 
-@keyframes data-drop {
-  0%,
-  30% {
-    transform: translateY(-0.62em);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .wordmark-data,
-  .hero-data,
-  .wordmark-data__layer,
-  .hero-data__layer {
+  .wordmark-data__layer {
     background: transparent;
     mix-blend-mode: normal;
     color: var(--blend-end);
   }
 
-  .wordmark-data__shift,
-  .hero-data__shift {
+  .wordmark-data__shift {
     display: none;
   }
 }
 
 @supports not (mix-blend-mode: plus-lighter) {
   .wordmark-data,
-  .hero-data,
-  .wordmark-data__layer,
-  .hero-data__layer {
+  .wordmark-data__layer {
     background: transparent;
     mix-blend-mode: normal;
     color: var(--blend-end);
   }
 
-  .wordmark-data__shift,
-  .hero-data__shift {
+  .wordmark-data__shift {
     display: none;
   }
 }

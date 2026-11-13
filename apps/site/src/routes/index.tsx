@@ -36,13 +36,7 @@ export default function Home() {
             <span class="seal" />
           </div>
           <div>
-            <h1>
-              <span class="hero-data">
-                <span class="hero-data__layer">Data</span>
-                <span class="hero-data__shift" aria-hidden="true">Data</span>
-              </span>{" "}
-              that outlive the company that issued them.
-            </h1>
+            <h1>Records that outlive the company that issued them.</h1>
             <p>
               A receipt, a warranty, a proof of ownership. The company that sent it can close. Records that stay
               structured, so a later reader can still check who issued them.
