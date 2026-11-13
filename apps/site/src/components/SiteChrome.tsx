@@ -3,6 +3,7 @@ import type { ParentProps } from "solid-js";
 import { createSignal, onCleanup, onMount, Show } from "solid-js";
 
 import AccountMenu from "~/components/AccountMenu";
+import MatrixField from "~/components/MatrixField";
 import ModeToggle from "~/components/ui/mode-toggle";
 import { subscribePrivacy } from "~/lib/privacy-hub";
 import { readSession, subscribeSession } from "~/lib/session";
@@ -36,6 +37,7 @@ export default function SiteChrome(props: ParentProps) {
 
   return (
     <div class="flex min-h-screen flex-col">
+      <MatrixField />
       <header class="site-header">
         <A href="/" class="wordmark">
           <img src="/mark.svg" alt="" width="28" height="28" />

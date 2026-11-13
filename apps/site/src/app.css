@@ -66,8 +66,33 @@ a {
   @apply text-primary underline-offset-4 hover:underline;
 }
 
+.matrix-field {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  margin: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  color: hsl(var(--muted-foreground));
+  font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", monospace;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  letter-spacing: 0.28em;
+  white-space: pre;
+  opacity: 0.42;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 36%, #000 0%, transparent 74%);
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 36%, #000 0%, transparent 74%);
+}
+
 .site-header {
   @apply sticky top-0 z-10 flex flex-wrap items-center justify-between gap-4 border-b border-border bg-background/95 px-6 py-3 backdrop-blur;
+}
+
+.site-main,
+.site-footer {
+  position: relative;
+  z-index: 1;
 }
 
 .wordmark {
