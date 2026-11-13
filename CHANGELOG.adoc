@@ -26,6 +26,7 @@ All notable changes to this project are documented in this file and in link:chan
 * Sora’s Latin file is inlined in the site stylesheet, so the first paint does not wait on a second font request or swap in a fallback face.
 * The header and favicon use the symbol from the Vecteezy mark, without the placeholder wordmark. The required credit is on the About page.
 * The header name is userdata. The word data is regular Doto, lowercase.
+* On load, data is drawn twice in colors that add to white, and the extra copy slides left onto the first.
 * Sign in has its own outlined control. The filled button stays for opening the vault and downloads.
 
 * Public docs for this repository are at `https://docs.userdata.cloud/vault/`.

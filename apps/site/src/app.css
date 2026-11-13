@@ -85,11 +85,65 @@ a {
 }
 
 .wordmark-data {
+  display: inline-grid;
+  isolation: isolate;
+  background: #000;
+  mix-blend-mode: difference;
   font-family: "Doto", sans-serif;
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 2.25rem;
   font-synthesis: none;
   letter-spacing: 0.01em;
+  line-height: 1;
+}
+
+.wordmark-data__layer,
+.wordmark-data__shift {
+  grid-area: 1 / 1;
+  color: rgb(91, 77, 255);
+  mix-blend-mode: plus-lighter;
+}
+
+.wordmark-data__shift {
+  color: rgb(164, 178, 0);
+  animation: data-resolve 1.15s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes data-resolve {
+  0%,
+  30% {
+    transform: translateX(0.22em);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wordmark-data,
+  .wordmark-data__layer {
+    background: transparent;
+    mix-blend-mode: normal;
+    color: inherit;
+  }
+
+  .wordmark-data__shift {
+    display: none;
+  }
+}
+
+@supports not (mix-blend-mode: plus-lighter) {
+  .wordmark-data,
+  .wordmark-data__layer {
+    background: transparent;
+    mix-blend-mode: normal;
+    color: inherit;
+  }
+
+  .wordmark-data__shift {
+    display: none;
+  }
 }
 
 .site-nav {

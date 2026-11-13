@@ -39,7 +39,10 @@ export default function SiteChrome(props: ParentProps) {
         <A href="/" class="wordmark">
           <img src="/mark.svg" alt="" width="28" height="28" />
           <span class="wordmark-name">
-            user<span class="wordmark-data">data</span>
+            user<span class="wordmark-data">
+              <span class="wordmark-data__layer">data</span>
+              <span class="wordmark-data__shift" aria-hidden="true">data</span>
+            </span>
           </span>
         </A>
         <nav class="site-nav" aria-label="Site">
