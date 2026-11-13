@@ -521,6 +521,83 @@ a {
   @apply grid gap-4 sm:grid-cols-2;
 }
 
+.store-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.85rem 1.25rem;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.store-row li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: hsl(var(--foreground));
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.store-row img {
+  display: block;
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.store-row .is-planned {
+  color: hsl(var(--muted-foreground));
+}
+
+.store-row .is-planned img {
+  filter: grayscale(1);
+  opacity: 0.38;
+}
+
+.app-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border: 1px solid hsl(var(--border));
+  font-family: "Sora Variable", sans-serif;
+}
+
+.app-shot .shot-bg {
+  fill: hsl(var(--background));
+}
+
+.app-shot .shot-bar {
+  fill: hsl(var(--muted));
+}
+
+.app-shot .shot-card {
+  fill: hsl(var(--card));
+  stroke: hsl(var(--border));
+}
+
+.app-shot .shot-ink {
+  fill: hsl(var(--foreground));
+}
+
+.app-shot .shot-muted {
+  fill: hsl(var(--muted-foreground));
+}
+
+.app-shot .shot-accent {
+  fill: hsl(var(--primary));
+}
+
+.app-shot .shot-seal {
+  fill: hsl(var(--seal));
+}
+
+.app-shot .shot-on-accent {
+  fill: hsl(var(--primary-foreground));
+}
+
 .theme-trigger {
   color: hsl(var(--foreground));
 }

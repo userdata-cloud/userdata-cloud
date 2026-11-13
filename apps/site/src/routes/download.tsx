@@ -1,6 +1,18 @@
 import { Title } from "@solidjs/meta";
 
+import { DesktopMock } from "~/components/AppMockups";
+
 const REPO = "https://github.com/userdata-cloud/userdata-cloud";
+
+const BROWSERS = [
+  { name: "Firefox", file: "firefox", ready: true },
+  { name: "Chrome", file: "chrome", ready: true },
+  { name: "Chromium", file: "chromium", ready: false },
+  { name: "Brave", file: "brave", ready: false },
+  { name: "Opera", file: "opera", ready: false },
+  { name: "Edge", file: "edge", ready: true },
+  { name: "Safari", file: "safari", ready: false },
+] as const;
 
 export default function Download() {
   return (
@@ -14,6 +26,7 @@ export default function Download() {
 
       <div class="download-grid">
         <div class="card">
+          <DesktopMock />
           <h2>Desktop</h2>
           <p>Windows, macOS, and Linux installers via Electron.</p>
           <a class="btn btn--primary" href={`${REPO}/releases`} target="_blank" rel="noreferrer">
@@ -22,10 +35,15 @@ export default function Download() {
         </div>
         <div class="card">
           <h2>Browser companion</h2>
-          <p>Chrome, Edge, and Firefox (MV3) extension build instructions live in the repository README.</p>
-          <a class="btn" href={`${REPO}/tree/main/apps/extension`} target="_blank" rel="noreferrer">
-            Extension sources
-          </a>
+          <p>Chrome, Edge, and Firefox. The grey marks are planned.</p>
+          <ul class="store-row">
+            {BROWSERS.map((browser) => (
+              <li classList={{ "is-planned": !browser.ready }} title={browser.ready ? undefined : "Planned"}>
+                <img src={`/stores/${browser.file}.svg`} alt="" width="22" height="22" />
+                {browser.name}
+              </li>
+            ))}
+          </ul>
         </div>
         <div class="card">
           <h2>Source</h2>

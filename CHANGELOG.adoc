@@ -32,6 +32,7 @@ All notable changes to this project are documented in this file and in link:chan
 * A pricing page states that users store for free and that businesses pay for the attestation records they issue.
 * The footer is a row of links: About, News, Blog, and Docs. News and Blog share a large tab on those pages.
 * The About page names Ryan Johnson and Lauren Poole as the people who conceptualized and started userdata.cloud, with a photo of Lauren Poole.
+* The Apps page shows a mockup of the desktop app. The browser companion shows Firefox, Chrome, Chromium, Brave, Opera, Edge, and Safari. Chromium, Brave, Opera, and Safari are grey until those builds exist.
 * A faint field of 0s and 1s scrolls with the page, fades into the page color, and sits quieter behind the writing. The header is translucent over it.
 * Sign in has its own outlined control. The filled button stays for opening the vault and downloads.
 
