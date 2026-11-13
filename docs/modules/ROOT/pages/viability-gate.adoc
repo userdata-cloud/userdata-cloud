@@ -4,7 +4,7 @@
 :page-usage-context: Decision page on the vault component of the docs hub
 :page-orig-author: Ryan Johnson
 :page-last-author: Cursor agent on behalf of Ryan Johnson
-:page-last-edited: 2026-11-12
+:page-last-edited: 2026-11-13
 :page-keywords: viability, receipts, warranties
 
 ifndef::page-context-active[]
@@ -30,6 +30,7 @@ The reasoning, pricing, and sequencing live in the private team docs repository 
 * Local vault clients that already exist: desktop, extension, and the static site.
 * A signed record envelope a client can store and show.
 * Ingestion from mail a person already receives, aimed at receipts and proof of ownership.
+* A PDF or scan of a paper receipt or warranty, kept beside the structured record. Reading fields from the file is allowed. The file is kept in addition to an issuer signature.
 
 == Not allowed yet
 

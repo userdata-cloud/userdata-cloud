@@ -27,6 +27,8 @@ link:../explanation/vision-and-constraints.adoc[Vision] sketches layers (event l
 
 * Content-addressed storage for large files; streaming hash API; dedupe.
 * Garbage collection policy for unreferenced staged blobs.
+* A person can keep a file of a record that was never issued as data, including a PDF or a scan of a paper receipt or warranty.
+* The file stays beside a structured record. An issuer signature applies to the structured record. The PDF is kept in addition to that signature.
 
 == Phase 2 — Graph index
 

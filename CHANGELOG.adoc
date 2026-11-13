@@ -22,6 +22,7 @@ All notable changes to this project are documented in this file and in link:chan
 === Changed
 
 * Home copy treats userdata.cloud as a place personal data can stay, online by default, with a local copy that can start offline and sync later. A separate line covers a record the issuer signs.
+* Plans now allow a PDF or scan of a paper receipt or warranty beside the structured record. Reading fields from the file is ingestion. The file is kept in addition to an issuer signature.
 * The theme control is part of the first page, so the icon is not a late client download.
 * Sora’s Latin file is inlined in the site stylesheet, so the first paint does not wait on a second font request or swap in a fallback face.
 * The header and favicon use the symbol from the Vecteezy mark, without the placeholder wordmark. The required credit is on the About page.

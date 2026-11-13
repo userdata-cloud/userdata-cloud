@@ -47,6 +47,8 @@ Default stance: patients should be able to read their records in ordinary circum
 
 OCR, speech, and video understanding are feasible on capable local machines but vary widely by device. Treat model outputs as *proposals* that feed a review queue for high-stakes fields, and keep provenance (which model, which file region, when).
 
+A PDF or a scan of a paper record is one of those files. Reading fields out of it is ingestion. The file stays beside any structured record. An issuer signature stays on the structured record, and the PDF is kept in addition to that signature.
+
 == Form-filling fallback
 
 Browser automation breaks with site changes and may conflict with terms of service. Treat standards-based exchange as the primary path and automation as a best-effort assistant with user visibility and consent.
