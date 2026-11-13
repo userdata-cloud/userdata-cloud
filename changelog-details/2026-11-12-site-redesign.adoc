@@ -13,7 +13,7 @@ The product site at `apps/site` is the public homepage for userdata.cloud while 
 * On load, a second `data` starts just to the right. The colors are `rgb(255, 140, 0)` and `rgb(0, 50, 255)`. `plus-lighter` makes the overlap `rgb(255, 190, 255)`. The group has no fill.
 * The home headline word Data uses inlined Doto regular (`apps/site/src/fonts/doto-regular.css`). Regenerate with `node apps/site/scripts/bake-doto.mjs`. A second copy starts above the word and slides down in the same two colors.
 * `data` is `1rem`, the same size as `user`.
-* The home hero is a taller violet band with space under the buttons. The green band below keeps a heading and a line for each point, starting with “Keep your records”. The footer is only News, docs, and about.
+* The home hero is a taller violet band with space under the buttons. The green band below keeps a heading and a line for each point, starting with “Keep your records” and closing with “Replaces email.” The footer is only News, docs, and about.
 * A field of 0s and 1s scrolls with the page and fades out to the page background. The glyphs are quieter behind the writing. The header is translucent enough that the field shows through.
 * Sign in uses `.btn--signin` (seal outline). `.btn--primary` stays on Open your vault and downloads.
 * Settings are stored in `localStorage` under `prv_preferences_v1`. They cover account, identity, vault prompts, mail ingestion, household members, notifications, privacy, appearance, expected issuers, the browser companion, a developer note, and this browser's session. Withholding identity still drops the open vault from the tab.

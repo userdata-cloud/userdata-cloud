@@ -84,6 +84,13 @@ export default function Home() {
             <h2>A record the issuer signs</h2>
             <p>A company signs a structured record when it creates it, so a later reader can check who issued it.</p>
           </article>
+          <article class="soundbyte">
+            <h2>Replaces email</h2>
+            <p>
+              Connect your email, ingest and recreate your records in database format. The future is data, direct from
+              businesses into our database.
+            </p>
+          </article>
         </div>
       </section>
     </>

@@ -29,7 +29,7 @@ All notable changes to this project are documented in this file and in link:chan
 * The header name is userdata. The word data uses the same face as user.
 * On load, data is drawn twice in orange and electric blue that add to pink, and the extra copy slides left onto the first. The pair has no background plate.
 * The home headline starts with Data in Doto. A second copy starts above that word and slides down, in the same two colors.
-* The home page gives the tagline and buttons a taller violet band, with room before a green band of record lines.
+* The home page gives the tagline and buttons a taller violet band, with room before a green band of record lines. One line is Replaces email: connect a mailbox, then take records straight from businesses.
 * A faint field of 0s and 1s scrolls with the page, fades into the page color, and sits quieter behind the writing. The header is translucent over it.
 * Sign in has its own outlined control. The filled button stays for opening the vault and downloads.
 
