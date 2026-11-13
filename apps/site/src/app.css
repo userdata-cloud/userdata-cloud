@@ -233,19 +233,14 @@ a {
 
 .soundbytes {
   display: grid;
-  gap: 2rem;
+  gap: 1.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.soundbytes > h2 {
-  @apply m-0 text-sm font-semibold uppercase tracking-wide text-foreground;
-}
-
-.soundbyte h3 {
-  @apply m-0 text-lg font-semibold text-foreground;
-}
-
-.soundbyte p {
-  @apply mb-0 mt-1 max-w-prose text-muted-foreground;
+.soundbytes li {
+  @apply max-w-prose text-lg font-semibold text-foreground;
 }
 
 .lede {

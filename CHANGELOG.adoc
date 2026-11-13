@@ -27,7 +27,7 @@ All notable changes to this project are documented in this file and in link:chan
 * The header and favicon use the symbol from the Vecteezy mark, without the placeholder wordmark. The required credit is on the About page.
 * The header name is userdata. The word data is regular Doto, lowercase.
 * On load, data is drawn twice in colors that add to white, and the extra copy slides left onto the first. The pair has no background plate.
-* The home page gives the tagline and buttons their own violet band, with room before a green soundbytes band.
+* The home page gives the tagline and buttons their own violet band, with room before a green band of record lines.
 * A faint field of 0s and 1s sits on the page and fades into the page color. The home bands are translucent over it.
 * Sign in has its own outlined control. The filled button stays for opening the vault and downloads.
 

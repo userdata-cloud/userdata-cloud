@@ -12,6 +12,7 @@ The product site at `apps/site` is the public homepage for userdata.cloud while 
 * The header name is `userdata`. `data` uses inlined Doto regular (`apps/site/src/fonts/doto-regular.css`). Regenerate with `node apps/site/scripts/bake-doto.mjs`.
 * On load, a second `data` starts just to the right. The colors are `rgb(91, 77, 255)` and its additive complement `rgb(164, 178, 0)`. `plus-lighter` makes the overlap white, and the pair is differenced with the page so that white reads as ink. The group has no fill, so the header does not show a plate behind the word.
 * `data` is `1rem`, the same size as `user`.
-* The home hero is a violet band with space under the buttons. Soundbytes sit on a green band: you keep the record, a host you choose, a folder is one host, and this site is not the archive. Both bands are translucent. A fixed field of 0s and 1s sits behind them and fades out to the page background.
+* The home hero is a violet band with space under the buttons. A green band below carries lines such as “Records that stay on a host of your choice.” The footer is only News, docs, and about.
+* A fixed field of 0s and 1s sits behind the page and fades out to the page background. The home bands are translucent over it.
 * Sign in uses `.btn--signin` (seal outline). `.btn--primary` stays on Open your vault and downloads.
 * Settings are stored in `localStorage` under `prv_preferences_v1`. They cover account, identity, vault prompts, mail ingestion, household members, notifications, privacy, appearance, expected issuers, the browser companion, a developer note, and this browser's session. Withholding identity still drops the open vault from the tab.

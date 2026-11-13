@@ -38,8 +38,8 @@ export default function Home() {
           <div>
             <h1>Records that outlive the company that issued them.</h1>
             <p>
-              A receipt, a warranty, a proof of ownership. The company that sent it can close. The record stays
-              structured, and a later reader can still check who issued it.
+              A receipt, a warranty, a proof of ownership. The company that sent it can close. Records that stay
+              structured, so a later reader can still check who issued them.
             </p>
             <div class="hero__actions">
               <Show
@@ -64,25 +64,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section class="band band--bytes" aria-labelledby="soundbytes-title">
-        <div class="band__inner soundbytes">
-          <h2 id="soundbytes-title">Soundbytes</h2>
-          <article class="soundbyte">
-            <h3>You keep the record</h3>
-            <p>The company signs a structured record when it creates it.</p>
-          </article>
-          <article class="soundbyte">
-            <h3>A host you choose</h3>
-            <p>You keep that record with a host you choose.</p>
-          </article>
-          <article class="soundbyte">
-            <h3>A folder is one host</h3>
-            <p>A folder on your disk is one such host, including a copy on a drive you carry.</p>
-          </article>
-          <article class="soundbyte">
-            <h3>This site is not the archive</h3>
-          </article>
-        </div>
+      <section class="band band--bytes">
+        <ul class="band__inner soundbytes">
+          <li>Records a company signs when it creates them.</li>
+          <li>Records that stay on a host of your choice.</li>
+          <li>Records that can live in a folder on disk, including a drive you carry.</li>
+          <li>Records that this site does not hold.</li>
+        </ul>
       </section>
     </>
   );

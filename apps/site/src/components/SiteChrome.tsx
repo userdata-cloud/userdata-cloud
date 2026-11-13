@@ -63,8 +63,7 @@ export default function SiteChrome(props: ParentProps) {
       </main>
       <footer class="site-footer">
         <p>
-          The record stays with a host you choose. <A href="/news">News</A>, <a href={DOCS}>docs</a>, and{" "}
-          <A href="/about">about</A>.
+          <A href="/news">News</A>, <a href={DOCS}>docs</a>, and <A href="/about">about</A>.
         </p>
       </footer>
     </div>
