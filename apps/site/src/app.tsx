@@ -1,7 +1,6 @@
 import { ColorModeProvider, ColorModeScript, cookieStorageManagerSSR } from "@kobalte/core";
-import { Link, MetaProvider, Title } from "@solidjs/meta";
-import "@fontsource-variable/sora";
-import soraLatin from "@fontsource-variable/sora/files/sora-latin-wght-normal.woff2?url";
+import { MetaProvider, Title } from "@solidjs/meta";
+import "./fonts/sora-latin.css";
 import { Router } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
 import { clientOnly } from "@solidjs/start";
@@ -29,7 +28,6 @@ export default function App() {
         <MetaProvider>
           <ColorModeScript storageType={storageManager.type} />
           <ColorModeProvider storageManager={storageManager}>
-            <Link rel="preload" as="font" type="font/woff2" href={soraLatin} crossorigin="anonymous" />
             <Title>userdata.cloud</Title>
             <SiteChrome>
               <ClientPrivacyBootstrap />

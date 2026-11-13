@@ -23,6 +23,7 @@ All notable changes to this project are documented in this file and in link:chan
 
 * Home and vault copy now treats a folder as one storage host. The record is a structured document the issuer signed. The site is not the archive.
 * The theme control is part of the first page, so the icon is not a late client download.
+* Sora’s Latin file is inlined in the site stylesheet, so the first paint does not wait on a second font request or swap in a fallback face.
 
 * Public docs for this repository are at `https://docs.userdata.cloud/vault/`.
 * The Netlify site name is `userdata-cloud` (`https://userdata-cloud.netlify.app/`). The previous `personalrecordvault.netlify.app` hostname no longer serves the site.
