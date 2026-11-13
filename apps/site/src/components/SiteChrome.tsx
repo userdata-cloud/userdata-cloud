@@ -1,11 +1,9 @@
 import { A, useLocation } from "@solidjs/router";
-import { clientOnly } from "@solidjs/start";
 import type { ParentProps } from "solid-js";
 import { createSignal, onCleanup, onMount, Show } from "solid-js";
 
 import AccountMenu from "~/components/AccountMenu";
-
-const ModeToggle = clientOnly(() => import("~/components/ui/mode-toggle"));
+import ModeToggle from "~/components/ui/mode-toggle";
 import { subscribePrivacy } from "~/lib/privacy-hub";
 import { readSession, subscribeSession } from "~/lib/session";
 
@@ -56,8 +54,8 @@ export default function SiteChrome(props: ParentProps) {
       </main>
       <footer class="site-footer">
         <p>
-          Records stay in a folder you hold. <A href="/news">News</A> and <a href={DOCS}>docs</a> sit in the bar
-          above.
+          The record stays with a host you choose. <A href="/news">News</A> and <a href={DOCS}>docs</a> sit in
+          the bar above.
         </p>
       </footer>
     </div>

@@ -36,8 +36,8 @@ export default function Home() {
       <div>
         <h1>Records that outlive the company that issued them.</h1>
         <p>
-          A receipt, a warranty, a proof of ownership. The company that sent it can close. The folder on your disk
-          still holds the record.
+          A receipt, a warranty, a proof of ownership. The company that sent it can close. The record stays
+          structured, and a later reader can still check who issued it.
         </p>
         <div class="hero__actions">
           <Show
@@ -60,10 +60,10 @@ export default function Home() {
           </a>
         </div>
         <div class="panel">
-          <h2>The folder is the vault</h2>
+          <h2>You keep the record</h2>
           <p>
-            Sign-in on this site is a marker in this browser. After that, you can open a folder on disk, including a
-            copy on a removable drive. The page does not upload the folder.
+            The company signs a structured record when it creates it. You keep that record with a host you choose. A
+            folder on your disk is one such host, including a copy on a drive you carry. This site is not the archive.
           </p>
         </div>
       </div>

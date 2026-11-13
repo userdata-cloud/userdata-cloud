@@ -21,6 +21,9 @@ All notable changes to this project are documented in this file and in link:chan
 
 === Changed
 
+* Home and vault copy now treats a folder as one storage host. The record is a structured document the issuer signed. The site is not the archive.
+* The theme control is part of the first page, so the icon is not a late client download.
+
 * Public docs for this repository are at `https://docs.userdata.cloud/vault/`.
 * The Netlify site name is `userdata-cloud` (`https://userdata-cloud.netlify.app/`). The previous `personalrecordvault.netlify.app` hostname no longer serves the site.
 * Implementation plans and explanation pages now live under `docs/modules/ROOT/pages/` so the org docs hub can publish them.

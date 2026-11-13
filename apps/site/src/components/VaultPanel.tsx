@@ -121,9 +121,9 @@ export default function VaultPanel() {
     <section>
       <h1>Web vault</h1>
       <p>
-        Pick a folder on disk (for example a USB-backed copy of your vault). Filenames are listed locally in your
-        browser; nothing is uploaded to Netlify. If the folder becomes unreachable (USB removed or permission revoked),
-        the site clears in-memory provider copies and hides identifiers until you reconnect.
+        This preview opens a folder on disk, one host a record can live in. A copy on a removable drive counts.
+        Filenames stay in this browser. Nothing is uploaded. If the folder becomes unreachable, the open view clears
+        until you reconnect.
       </p>
 
       <div class="panel" style={{ "margin-bottom": "1rem" }}>
