@@ -652,6 +652,29 @@ a {
   @apply text-sm text-muted-foreground;
 }
 
+.founder {
+  margin: 1.25rem 0 0;
+}
+
+.founder img {
+  display: block;
+  width: 11rem;
+  height: auto;
+  border: 1px solid hsl(var(--border));
+}
+
+.founder figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-top: 0.45rem;
+  font-size: 0.875rem;
+}
+
+.founder figcaption span {
+  color: hsl(var(--muted-foreground));
+}
+
 .credit {
   @apply mt-10 text-sm text-muted-foreground;
 }

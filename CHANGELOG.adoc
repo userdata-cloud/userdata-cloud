@@ -31,6 +31,7 @@ All notable changes to this project are documented in this file and in link:chan
 * The home page gives the tagline and buttons a taller violet band, then a features band and a How it works band. The headline is “User records that…”, set against a large user mark that sits to the right and is cut off at the bottom of that band. Content columns blur the digit field, lightly at the edges and more toward the writing. Business attestation records are stored free, paid for by businesses.
 * A pricing page states that users store for free and that businesses pay for the attestation records they issue.
 * The footer is a row of links: About, News, Blog, and Docs. News and Blog share a large tab on those pages.
+* The About page names Ryan Johnson and Lauren Poole as the people who conceptualized and started userdata.cloud, with a photo of Lauren Poole.
 * A faint field of 0s and 1s scrolls with the page, fades into the page color, and sits quieter behind the writing. The header is translucent over it.
 * Sign in has its own outlined control. The filled button stays for opening the vault and downloads.
 
