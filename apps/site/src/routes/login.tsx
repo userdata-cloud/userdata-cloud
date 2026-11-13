@@ -48,7 +48,9 @@ export default function Login() {
         </div>
         {error() ? <p style={{ color: "#b42318" }}>{error()}</p> : null}
         <div class="form__actions">
-          <Button type="submit">Continue to web vault</Button>
+          <Button class="btn--signin" type="submit">
+            Continue to web vault
+          </Button>
         </div>
       </form>
     </section>

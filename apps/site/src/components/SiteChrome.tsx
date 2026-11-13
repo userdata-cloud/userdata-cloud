@@ -38,14 +38,16 @@ export default function SiteChrome(props: ParentProps) {
       <header class="site-header">
         <A href="/" class="wordmark">
           <img src="/mark.svg" alt="" width="28" height="28" />
-          userdata.cloud
+          <span class="wordmark-name">
+            user<span class="wordmark-data">data</span>
+          </span>
         </A>
         <nav class="site-nav" aria-label="Site">
           <A href="/news">News</A>
           <a href={DOCS}>Docs</a>
           <A href="/download">Downloads</A>
           <ModeToggle />
-          <Show when={session()} fallback={<A href="/login">Sign in</A>}>
+          <Show when={session()} fallback={<A href="/login" class="btn--signin">Sign in</A>}>
             <AccountMenu />
           </Show>
         </nav>

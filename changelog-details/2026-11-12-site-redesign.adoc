@@ -9,4 +9,6 @@ The product site at `apps/site` is the public homepage for userdata.cloud while 
 * The theme icon is in the first HTML response. CSS shows the sun or the moon from the theme attribute set before paint.
 * Sora Latin is inlined in `apps/site/src/fonts/sora-latin.css` (`font-display: block`). Regenerate with `node apps/site/scripts/bake-sora.mjs`.
 * Header and favicon use `apps/site/public/mark.svg`, the symbol only. The placeholder wordmark was outlined type in the source file and is not in the site mark. The Vecteezy credit is on `/about`.
+* The header name is `userdata`. `data` uses inlined Pixelify Sans regular (`apps/site/src/fonts/pixelify-regular.css`). Regenerate with `node apps/site/scripts/bake-pixelify.mjs`.
+* Sign in uses `.btn--signin` (seal outline). `.btn--primary` stays on Open your vault and downloads.
 * Settings are stored in `localStorage` under `prv_preferences_v1`. They cover account, identity, vault prompts, mail ingestion, household members, notifications, privacy, appearance, expected issuers, the browser companion, a developer note, and this browser's session. Withholding identity still drops the open vault from the tab.

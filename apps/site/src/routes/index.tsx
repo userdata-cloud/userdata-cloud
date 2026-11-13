@@ -43,7 +43,7 @@ export default function Home() {
           <Show
             when={session()}
             fallback={
-              <a class="btn btn--primary" href="/login">
+              <a class="btn--signin" href="/login">
                 Sign in
               </a>
             }

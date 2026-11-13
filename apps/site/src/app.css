@@ -80,6 +80,18 @@ a {
   height: 1.75rem;
 }
 
+.wordmark-name {
+  line-height: 1;
+}
+
+.wordmark-data {
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  font-synthesis: none;
+  letter-spacing: 0;
+}
+
 .site-nav {
   @apply flex flex-wrap items-center gap-4;
 }
@@ -222,6 +234,33 @@ a {
 
 .btn--primary {
   @apply border-primary bg-primary text-primary-foreground hover:bg-primary/90;
+}
+
+.btn--signin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid hsl(var(--seal));
+  border-radius: 0;
+  background: transparent;
+  color: hsl(var(--foreground));
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.btn--signin:hover,
+.site-nav a.btn--signin:hover {
+  background: hsl(var(--seal));
+  color: hsl(var(--accent-foreground));
+  text-decoration: none;
+}
+
+.btn--signin:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
 }
 
 .download-grid {

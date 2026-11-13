@@ -1,6 +1,7 @@
 import { ColorModeProvider, ColorModeScript, cookieStorageManagerSSR } from "@kobalte/core";
 import { MetaProvider, Title } from "@solidjs/meta";
 import "./fonts/sora-latin.css";
+import "./fonts/pixelify-regular.css";
 import { Router } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
 import { clientOnly } from "@solidjs/start";
