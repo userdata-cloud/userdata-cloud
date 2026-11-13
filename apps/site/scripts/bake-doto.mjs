@@ -7,7 +7,7 @@ const woff = join(root, "node_modules", "@fontsource", "doto", "files", "doto-la
 const b64 = readFileSync(woff).toString("base64");
 const outDir = join(dirname(fileURLToPath(import.meta.url)), "..", "src", "fonts");
 mkdirSync(outDir, { recursive: true });
-const css = `/* Doto regular, inlined for the header word "data". */
+const css = `/* Doto regular, inlined for the home headline word "Data". */
 @font-face {
   font-family: "Doto";
   font-style: normal;

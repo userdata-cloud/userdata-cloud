@@ -9,8 +9,9 @@ The product site at `apps/site` is the public homepage for userdata.cloud while 
 * The theme icon is in the first HTML response. CSS shows the sun or the moon from the theme attribute set before paint.
 * Sora Latin is inlined in `apps/site/src/fonts/sora-latin.css` (`font-display: block`). Regenerate with `node apps/site/scripts/bake-sora.mjs`.
 * Header and favicon use `apps/site/public/mark.svg`, the symbol only. The placeholder wordmark was outlined type in the source file and is not in the site mark. The Vecteezy credit is on `/about`.
-* The header name is `userdata`. `data` uses inlined Doto regular (`apps/site/src/fonts/doto-regular.css`). Regenerate with `node apps/site/scripts/bake-doto.mjs`.
-* On load, a second `data` starts just to the right. The colors are `rgb(91, 77, 255)` and its additive complement `rgb(164, 178, 0)`. `plus-lighter` makes the overlap white, and the pair is differenced with the page so that white reads as ink. The group has no fill, so the header does not show a plate behind the word.
+* The header name is `userdata`. `data` uses the same Sora face as `user`.
+* On load, a second `data` starts just to the right. The colors are `rgb(255, 140, 0)` and `rgb(0, 50, 255)`. `plus-lighter` makes the overlap `rgb(255, 190, 255)`. The group has no fill.
+* The home headline word Data uses inlined Doto regular (`apps/site/src/fonts/doto-regular.css`). Regenerate with `node apps/site/scripts/bake-doto.mjs`. A second copy starts above the word and slides down in the same two colors.
 * `data` is `1rem`, the same size as `user`.
 * The home hero is a taller violet band with space under the buttons. The green band below keeps a heading and a line for each point, starting with “Keep your records”. The footer is only News, docs, and about.
 * A field of 0s and 1s scrolls with the page and fades out to the page background. The glyphs are quieter behind the writing. The header is translucent enough that the field shows through.
