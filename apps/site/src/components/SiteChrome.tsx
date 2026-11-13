@@ -64,9 +64,14 @@ export default function SiteChrome(props: ParentProps) {
         {props.children}
       </main>
       <footer class="site-footer">
-        <p>
-          <A href="/news">News</A>, <a href={DOCS}>docs</a>, and <A href="/about">about</A>.
-        </p>
+        <nav aria-label="Footer">
+          <ul class="site-footer__nav">
+            <li><A href="/about">About</A></li>
+            <li><A href="/news">News</A></li>
+            <li><A href="/blog">Blog</A></li>
+            <li><a href={DOCS}>Docs</a></li>
+          </ul>
+        </nav>
       </footer>
     </div>
   );

@@ -1,12 +1,15 @@
 import { Title } from "@solidjs/meta";
 import { A } from "@solidjs/router";
 
+import WritingTabs from "~/components/WritingTabs";
+
 export default function NewsIndex() {
   return (
     <section class="article">
       <Title>News — userdata.cloud</Title>
-      <h1>News</h1>
-      <p>Dated notes about the organization.</p>
+      <h1 class="sr-only">News</h1>
+      <WritingTabs current="news" />
+      <p>Get the latest official updates on userdata.cloud here.</p>
       <ul class="news-list">
         <li>
           <A href="/news/userdata-cloud-opens-its-public-organization">
