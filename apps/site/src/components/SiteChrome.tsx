@@ -32,6 +32,7 @@ export default function SiteChrome(props: ParentProps) {
   };
 
   const wide = () => loc.pathname.startsWith("/settings");
+  const home = () => loc.pathname === "/";
 
   return (
     <div class="flex min-h-screen flex-col">
@@ -55,7 +56,7 @@ export default function SiteChrome(props: ParentProps) {
           </Show>
         </nav>
       </header>
-      <main class="site-main" classList={{ "site-main--wide": wide() }}>
+      <main class="site-main" classList={{ "site-main--wide": wide(), "site-main--home": home() }}>
         {props.children}
       </main>
       <footer class="site-footer">

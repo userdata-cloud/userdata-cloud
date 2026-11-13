@@ -163,6 +163,14 @@ a {
   @apply max-w-5xl;
 }
 
+.site-main--home {
+  display: flex;
+  flex-direction: column;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
 .site-footer {
   @apply border-t border-border px-6 py-5 text-sm text-muted-foreground;
 }
@@ -173,6 +181,46 @@ a {
 
 .site-footer a {
   @apply text-foreground;
+}
+
+.band__inner {
+  @apply mx-auto w-full max-w-3xl px-6;
+}
+
+.band--hero {
+  background: hsl(var(--primary) / 0.08);
+  padding: 4.5rem 0 6rem;
+}
+
+.band--bytes {
+  background: hsl(var(--seal) / 0.12);
+  flex: 1;
+  padding: 4rem 0 4.5rem;
+}
+
+[data-kb-theme="dark"] .band--hero {
+  background: hsl(var(--primary) / 0.16);
+}
+
+[data-kb-theme="dark"] .band--bytes {
+  background: hsl(var(--seal) / 0.18);
+}
+
+.soundbytes {
+  display: grid;
+  gap: 2rem;
+}
+
+.soundbytes > h2 {
+  @apply m-0 text-sm font-semibold uppercase tracking-wide text-foreground;
+}
+
+.soundbyte h3 {
+  @apply m-0 text-lg font-semibold text-foreground;
+}
+
+.soundbyte p {
+  @apply mb-0 mt-1 max-w-prose text-muted-foreground;
 }
 
 .lede {
