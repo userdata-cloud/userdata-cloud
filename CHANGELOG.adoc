@@ -28,7 +28,8 @@ All notable changes to this project are documented in this file and in link:chan
 * The header and favicon use the symbol from the Vecteezy mark, without the placeholder wordmark. The required credit is on the About page.
 * The header name is userdata. The word data uses the same face as user.
 * On load, data is drawn twice in orange and electric blue that add to pink, and the extra copy slides left onto the first. The pair has no background plate.
-* The home page gives the tagline and buttons a taller violet band, then a features band and a How it works band. Business attestation records are stored free, paid for by businesses.
+* The home page gives the tagline and buttons a taller violet band, then a features band and a How it works band. The headline is “User records that…”, set against a large user mark that sits to the right and is cut off at the bottom of that band. Content columns blur the digit field, lightly at the edges and more toward the writing. Business attestation records are stored free, paid for by businesses.
+* A pricing page states that users store for free and that businesses pay for the attestation records they issue.
 * A faint field of 0s and 1s scrolls with the page, fades into the page color, and sits quieter behind the writing. The header is translucent over it.
 * Sign in has its own outlined control. The filled button stays for opening the vault and downloads.
 

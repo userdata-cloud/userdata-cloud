@@ -20,11 +20,11 @@ const SETTINGS = [
 ];
 
 export function getPrerenderRoutes() {
-  return ["/", "/about", "/download", "/login", "/app", "/identity", "/providers", "/news", NEWS, "/settings", ...SETTINGS];
+  return ["/", "/about", "/pricing", "/download", "/login", "/app", "/identity", "/providers", "/news", NEWS, "/settings", ...SETTINGS];
 }
 
 export function getSitemapRoutes() {
-  return ["/", "/about", "/download", "/providers", "/news", NEWS];
+  return ["/", "/about", "/pricing", "/download", "/providers", "/news", NEWS];
 }
 
 /** Prefer Netlify deploy URL when building on Netlify. */

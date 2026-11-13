@@ -31,12 +31,18 @@ export default function Home() {
     <>
       <Title>userdata.cloud</Title>
       <section class="band band--hero">
+        <svg class="hero-user" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-4.42 0-8 2.24-8 5v2h16v-2c0-2.76-3.58-5-8-5z"
+          />
+        </svg>
         <div class="band__inner lede">
           <div class="rail" aria-hidden="true">
             <span class="seal" />
           </div>
           <div>
-            <h1>Records that outlive the company that issued them.</h1>
+            <h1>User records that outlive the company that issued them.</h1>
             <p>
               A receipt, a warranty, a proof of ownership. The company that sent it can close. Records that stay
               structured, so a later reader can still check who issued them.

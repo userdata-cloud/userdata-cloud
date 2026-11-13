@@ -221,14 +221,73 @@ a {
   @apply text-foreground;
 }
 
+.band__inner,
+.site-main:not(.site-main--home) {
+  position: relative;
+  isolation: isolate;
+}
+
 .band__inner {
   @apply mx-auto w-full max-w-3xl px-6;
 }
 
+.band__inner::before,
+.band__inner::after,
+.site-main:not(.site-main--home)::before,
+.site-main:not(.site-main--home)::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: -2.5rem -18%;
+  pointer-events: none;
+}
+
+.band__inner::before,
+.site-main:not(.site-main--home)::before {
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  mask-image: radial-gradient(ellipse 95% 90% at 42% 48%, #000 0%, transparent 78%);
+}
+
+.band__inner::after,
+.site-main:not(.site-main--home)::after {
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  mask-image: radial-gradient(ellipse 58% 72% at 42% 46%, #000 0%, transparent 70%);
+}
+
+.band__inner > *,
+.site-main:not(.site-main--home) > * {
+  position: relative;
+  z-index: 1;
+}
+
 .band--hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   background: hsl(var(--primary) / 0.08);
   min-height: 64vh;
-  padding: 5.5rem 0 7rem;
+  padding: 2.5rem 0 8.5rem;
+}
+
+.hero-user {
+  position: absolute;
+  z-index: 0;
+  left: 66%;
+  bottom: -22%;
+  width: auto;
+  height: 112%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  color: hsl(var(--foreground) / 0.16);
+}
+
+.band--hero .lede {
+  position: relative;
+  z-index: 1;
 }
 
 .band--features {
@@ -251,6 +310,46 @@ a {
 
 [data-kb-theme="dark"] .band--works {
   background: hsl(var(--muted) / 0.55);
+}
+
+.band--price-users {
+  background: hsl(var(--primary) / 0.08);
+  padding: 4.5rem 0 5rem;
+}
+
+.band--price-business {
+  background: hsl(var(--seal) / 0.12);
+  flex: 1;
+  padding: 4rem 0 4.5rem;
+}
+
+[data-kb-theme="dark"] .band--price-users {
+  background: hsl(var(--primary) / 0.16);
+}
+
+[data-kb-theme="dark"] .band--price-business {
+  background: hsl(var(--seal) / 0.18);
+}
+
+.price h1,
+.price h2 {
+  @apply m-0 max-w-xl font-semibold tracking-tight text-foreground;
+}
+
+.price h1 {
+  @apply text-3xl sm:text-4xl;
+}
+
+.price h2 {
+  @apply text-2xl;
+}
+
+.price p {
+  @apply mb-0 mt-4 max-w-prose text-muted-foreground;
+}
+
+.price p + p {
+  @apply mt-3;
 }
 
 .band__title {

@@ -34,6 +34,7 @@ export default function SiteChrome(props: ParentProps) {
 
   const wide = () => loc.pathname.startsWith("/settings");
   const home = () => loc.pathname === "/";
+  const bands = () => home() || loc.pathname === "/pricing";
 
   return (
     <div class="relative flex min-h-screen flex-col">
@@ -51,14 +52,15 @@ export default function SiteChrome(props: ParentProps) {
         <nav class="site-nav" aria-label="Site">
           <A href="/news">News</A>
           <a href={DOCS}>Docs</a>
-          <A href="/download">Downloads</A>
+          <A href="/download">Apps</A>
+          <A href="/pricing">Pricing</A>
           <ModeToggle />
           <Show when={session()} fallback={<A href="/login" class="btn--signin">Sign in</A>}>
             <AccountMenu />
           </Show>
         </nav>
       </header>
-      <main class="site-main" classList={{ "site-main--wide": wide(), "site-main--home": home() }}>
+      <main class="site-main" classList={{ "site-main--wide": wide(), "site-main--home": bands() }}>
         {props.children}
       </main>
       <footer class="site-footer">
