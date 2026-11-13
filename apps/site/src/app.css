@@ -87,7 +87,7 @@ a {
 .wordmark-data {
   display: inline-grid;
   isolation: isolate;
-  background: #000;
+  background: transparent;
   mix-blend-mode: difference;
   font-family: "Doto", sans-serif;
   font-weight: 400;
