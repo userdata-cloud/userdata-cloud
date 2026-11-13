@@ -1,71 +1,63 @@
-import { A } from "@solidjs/router";
+import { A, useLocation } from "@solidjs/router";
+import { clientOnly } from "@solidjs/start";
 import type { ParentProps } from "solid-js";
 import { createSignal, onCleanup, onMount, Show } from "solid-js";
-import { Button } from "@kobalte/core/button";
-import { isBlind, subscribePrivacy } from "~/lib/privacy-hub";
-import { clearSession, readSession } from "~/lib/session";
+
+import AccountMenu from "~/components/AccountMenu";
+
+const ModeToggle = clientOnly(() => import("~/components/ui/mode-toggle"));
+import { subscribePrivacy } from "~/lib/privacy-hub";
+import { readSession, subscribeSession } from "~/lib/session";
+
+const DOCS = "https://docs.userdata.cloud/home/";
 
 export default function SiteChrome(props: ParentProps) {
-  const [privacyEpoch, setPrivacyEpoch] = createSignal(0);
+  const loc = useLocation();
+  const [epoch, setEpoch] = createSignal(0);
+  const [ready, setReady] = createSignal(false);
 
   onMount(() => {
-    const off = subscribePrivacy(() => setPrivacyEpoch((n) => n + 1));
-    onCleanup(off);
+    setReady(true);
+    const bump = () => setEpoch((n) => n + 1);
+    const offPrivacy = subscribePrivacy(bump);
+    const offSession = subscribeSession(bump);
+    onCleanup(() => {
+      offPrivacy();
+      offSession();
+    });
   });
 
   const session = () => {
-    void privacyEpoch();
+    void epoch();
+    if (!ready()) return null;
     return readSession();
   };
 
-  const sessionHint = () => {
-    void privacyEpoch();
-    const s = readSession();
-    if (!s) return null;
-    if (isBlind()) return "Signed in (identity withheld)";
-    return `Signed in as ${s.email}`;
-  };
+  const wide = () => loc.pathname.startsWith("/settings");
 
   return (
-    <div class="chrome">
-      <header class="chrome__header">
-        <div class="chrome__brand">
-          <A href="/" class="chrome__logo">
-            Personal Records Vault
-          </A>
-          <span class="chrome__tag">static preview</span>
-        </div>
-        <nav class="chrome__nav">
-          <A href="/download" class="chrome__link">
-            Downloads
-          </A>
-          <A href="/login" class="chrome__link">
-            Web sign-in
-          </A>
-          <A href="/identity" class="chrome__link">
-            Identity
-          </A>
-          <A href="/providers" class="chrome__link">
-            Providers
-          </A>
-          <A href="/app" class="chrome__link">
-            Web vault
-          </A>
-          <Show when={session()}>
-            <span class="chrome__link" style={{ opacity: "0.85" }}>
-              {sessionHint()}
-            </span>
-            <Button class="chrome__btn" onClick={() => clearSession()}>
-              Sign out
-            </Button>
+    <div class="flex min-h-screen flex-col">
+      <header class="site-header">
+        <A href="/" class="wordmark">
+          userdata.cloud
+        </A>
+        <nav class="site-nav" aria-label="Site">
+          <A href="/news">News</A>
+          <a href={DOCS}>Docs</a>
+          <A href="/download">Downloads</A>
+          <ModeToggle />
+          <Show when={session()} fallback={<A href="/login">Sign in</A>}>
+            <AccountMenu />
           </Show>
         </nav>
       </header>
-      <main class="chrome__main">{props.children}</main>
-      <footer class="chrome__footer">
+      <main class="site-main" classList={{ "site-main--wide": wide() }}>
+        {props.children}
+      </main>
+      <footer class="site-footer">
         <p>
-          Experimental project — not a medical device. Prefer the desktop app for full vault features and USB
-          workflows.
+          Records stay in a folder you hold. <A href="/news">News</A> and <a href={DOCS}>docs</a> sit in the bar
+          above.
         </p>
       </footer>
     </div>

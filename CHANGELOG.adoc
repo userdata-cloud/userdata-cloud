@@ -6,6 +6,8 @@ All notable changes to this project are documented in this file and in link:chan
 
 === Added
 
+* The product site now carries the organization news note, docs and news links, a light, dark, and auto theme control, and a browser-local settings area (account, identity, vault, mail, household, notifications, privacy, appearance, issuers, companion, developers, this browser). Details: link:changelog-details/2026-11-12-site-redesign.adoc[2026-11-12 — Site redesign].
+
 * Antora component `vault` under `docs/`, including a maintainer page for what to build first. Member-only market sequencing lives in the `userdata-cloud/team-docs` repository.
 * GitHub Actions workflow that publishes `apps/site` to the existing Netlify site. Details: link:changelog-details/2026-11-12-org-and-netlify-ci.adoc[2026-11-12 — Org move and Netlify CI].
 

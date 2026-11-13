@@ -25,8 +25,8 @@ export default function Login() {
 
   return (
     <section class="form">
-      <Title>Web sign-in — Personal Records Vault</Title>
-      <h1>Web sign-in</h1>
+      <Title>Sign in — userdata.cloud</Title>
+      <h1>Sign in</h1>
       <p>
         This is a <strong>local session marker</strong> only (stored in <code>sessionStorage</code>). It is not a cloud
         account and does not send credentials anywhere. Replace with your real auth provider when you wire hosted

@@ -33,5 +33,8 @@ packages/sdk/dist
 .DS_Store
 Thumbs.db
 
+# Local agent notes
+MEMORIES.md
+
 # Dub / local runs sometimes drop binaries at repo root
 /personal-records-vault.exe

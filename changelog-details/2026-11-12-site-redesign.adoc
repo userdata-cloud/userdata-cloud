@@ -1,0 +1,8 @@
+= 2026-11-12 — Site redesign
+
+The product site at `apps/site` is the public homepage for userdata.cloud while the apex domain still serves the organization Pages site.
+
+* Visual system: Sora, a violet action color, a green seal, and one violet rail beside the home headline. Light, dark, and auto live in the top bar and on the appearance settings page.
+* News: the 12 November 2026 organization note is published on this site. Docs link to `https://docs.userdata.cloud/home/`.
+* Sign-in stays a browser session marker. A signed-in visit shows a circular picture (or initials) that opens Settings and Sign out.
+* Settings are stored in `localStorage` under `prv_preferences_v1`. They cover account, identity, vault prompts, mail ingestion, household members, notifications, privacy, appearance, expected issuers, the browser companion, a developer note, and this browser's session. Withholding identity still drops the open vault from the tab.
