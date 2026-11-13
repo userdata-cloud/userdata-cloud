@@ -64,26 +64,44 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section class="band band--bytes">
-        <div class="band__inner soundbytes">
-          <article class="soundbyte">
-            <h2>Keep your records</h2>
+      <section class="band band--features">
+        <div class="band__inner feature-list">
+          <h2 class="band__title">Features</h2>
+          <article class="feature">
+            <h3>Keep your records</h3>
             <p>Personal data you create can stay on userdata.cloud.</p>
           </article>
-          <article class="soundbyte">
-            <h2>Access your data online or locally</h2>
+          <article class="feature">
+            <h3>Access your data online or locally</h3>
             <p>The web is the default. A copy can start offline, then sync and stay managed with the online one.</p>
           </article>
-          <article class="soundbyte">
-            <h2>A record the issuer signs</h2>
-            <p>A company signs a structured record when it creates it, so a later reader can check who issued it.</p>
-          </article>
-          <article class="soundbyte">
-            <h2>Replaces email</h2>
+          <article class="feature">
+            <h3>Replace your email</h3>
             <p>
               Connect your email, ingest and recreate your records in database format. The future is data, direct from
               businesses into our database.
             </p>
+          </article>
+          <article class="feature">
+            <h3>Stored free</h3>
+            <p>Business attestation records are stored for free. Paid for by businesses.</p>
+          </article>
+        </div>
+      </section>
+      <section class="band band--works">
+        <div class="band__inner feature-list">
+          <h2 class="band__title">How it works</h2>
+          <article class="feature">
+            <h3>A record the issuer signs</h3>
+            <p>A company signs a structured record when it creates it, so a later reader can check who issued it.</p>
+          </article>
+          <article class="feature">
+            <h3>Mail becomes data</h3>
+            <p>Connect your email. What arrives there is ingested and recreated as database records.</p>
+          </article>
+          <article class="feature">
+            <h3>A business sends it directly</h3>
+            <p>The record can come straight from the business into the database.</p>
           </article>
         </div>
       </section>
