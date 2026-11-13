@@ -67,19 +67,16 @@ export default function Home() {
       <section class="band band--bytes">
         <div class="band__inner soundbytes">
           <article class="soundbyte">
-            <h2>Keep your records.</h2>
-            <p>A company signs a structured record when it creates it.</p>
+            <h2>Keep your records</h2>
+            <p>Personal data you create can stay on userdata.cloud.</p>
           </article>
           <article class="soundbyte">
-            <h2>A host of your choice</h2>
-            <p>Records that stay on a host of your choice.</p>
+            <h2>Access your data online or locally</h2>
+            <p>The web is the default. A copy can start offline, then sync and stay managed with the online one.</p>
           </article>
           <article class="soundbyte">
-            <h2>A folder is one host</h2>
-            <p>A folder on disk is one such host, including a copy on a drive you carry.</p>
-          </article>
-          <article class="soundbyte">
-            <h2>This site is not the archive</h2>
+            <h2>A record the issuer signs</h2>
+            <p>A company signs a structured record when it creates it, so a later reader can check who issued it.</p>
           </article>
         </div>
       </section>

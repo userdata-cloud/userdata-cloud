@@ -121,9 +121,9 @@ export default function VaultPanel() {
     <section>
       <h1>Web vault</h1>
       <p>
-        This preview opens a folder on disk, one host a record can live in. A copy on a removable drive counts.
-        Filenames stay in this browser. Nothing is uploaded. If the folder becomes unreachable, the open view clears
-        until you reconnect.
+        This preview opens a local folder. A copy on a removable drive counts. Filenames stay in this browser.
+        This preview does not sync that folder yet. If the folder becomes unreachable, the open view clears until
+        you reconnect.
       </p>
 
       <div class="panel" style={{ "margin-bottom": "1rem" }}>

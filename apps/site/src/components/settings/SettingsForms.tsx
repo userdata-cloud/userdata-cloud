@@ -118,7 +118,7 @@ export function VaultSettings() {
   return (
     <form class="settings-form" onSubmit={save}>
       <h1>Vault</h1>
-      <p>A folder is one host a record can live in. These prompts run before this browser opens that folder.</p>
+      <p>These prompts run before this browser opens a local folder.</p>
       <label class="check">
         <input
           type="checkbox"

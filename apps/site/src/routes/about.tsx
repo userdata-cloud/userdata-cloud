@@ -6,8 +6,8 @@ export default function About() {
       <Title>About — userdata.cloud</Title>
       <h1>About</h1>
       <p>
-        userdata.cloud keeps a record readable after the company that issued it is gone. The record is structured
-        and signed. A folder on disk is one host that can hold it.
+        userdata.cloud keeps personal data you create, and records a company signs. The web is the default. A
+        copy can start offline and sync with the online one later.
       </p>
       <p class="credit">
         <a href="https://www.vecteezy.com/free-vector/pixelated-logo">Pixelated Logo Vectors by Vecteezy</a>
