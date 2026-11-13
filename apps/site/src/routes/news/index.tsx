@@ -6,7 +6,7 @@ export default function NewsIndex() {
     <section class="article">
       <Title>News — userdata.cloud</Title>
       <h1>News</h1>
-      <p>Dated notes about the organization. Essays stay off this list.</p>
+      <p>Dated notes about the organization.</p>
       <ul class="news-list">
         <li>
           <A href="/news/userdata-cloud-opens-its-public-organization">
